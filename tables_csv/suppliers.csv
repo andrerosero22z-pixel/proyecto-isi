@@ -1,0 +1,4 @@
+supplier_id,supplier_name,lead_time_days,contact_email
+1,Proveedor Dessert,1,compras_dessert@proveedor.ec
+2,Proveedor Main,4,compras_main@proveedor.ec
+3,Proveedor Starter,3,compras_starter@proveedor.ec
