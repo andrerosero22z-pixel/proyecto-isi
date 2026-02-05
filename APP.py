@@ -159,11 +159,39 @@ def tps_checkout(order_id):
 
 
 # ====== UI ======
-st.title("🧾 TPS Restaurantes (Demo) — Integración TPS → ERP → SCM")
+st.title("🧾 TPS Restaurante (Demo)")
 
 customers = read_table("customers")
 products  = read_table("products")
 branches  = read_table("branches")
+
+st.subheader("👤 Crear nuevo cliente")
+
+new_name = st.text_input("Nombre del nuevo cliente (ej: Juan Perez)")
+if st.button("➕ Guardar cliente"):
+    new_name = new_name.strip()
+    if len(new_name) < 3:
+        st.warning("Escribe un nombre válido (mínimo 3 caracteres).")
+    else:
+        customers = read_table("customers")  # refresca
+        if (customers["customer_name"].astype(str).str.lower() == new_name.lower()).any():
+            st.warning("Ese cliente ya existe.")
+        else:
+            new_id = next_id("customers", "customer_id", 1)
+            append_table("customers", pd.DataFrame([{
+                "customer_id": new_id,
+                "customer_name": new_name,
+                "created_at": datetime.utcnow().isoformat()
+            }]))
+            st.success(f"✅ Cliente creado con ID {new_id}.")
+            st.rerun()
+
+
+
+
+
+
+
 
 if customers.empty:
     st.error("No existe customers.csv. Corre primero: py -m src.run_demo")
@@ -218,6 +246,27 @@ st.write("SCM (últimas 10 órdenes de compra):")
 st.dataframe(read_table("purchase_orders").tail(10))
 
 st.write("Inventario (top 10 menor stock):")
+
 inv = read_table("inventory")
+prod = read_table("products")
+
 inv["stock_on_hand"] = pd.to_numeric(inv["stock_on_hand"], errors="coerce").fillna(0)
-st.dataframe(inv.sort_values("stock_on_hand").head(10))
+
+# ✅ Traer nombre del producto y categoría
+inv_view = inv.merge(
+    prod[["product_id", "food_item", "category", "sale_price"]],
+    on="product_id",
+    how="left"
+)
+
+inv_view = inv_view.sort_values("stock_on_hand").head(10)
+
+# Orden bonito de columnas
+inv_view = inv_view[[
+    "branch_id", "product_id", "food_item", "category",
+    "stock_on_hand", "stock_min", "reorder_qty", "sale_price"
+]]
+
+st.dataframe(inv_view)
+
+

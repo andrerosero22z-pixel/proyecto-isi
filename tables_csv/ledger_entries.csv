@@ -1,7 +1,3 @@
 entry_id,entry_ts,order_id,entry_type,amount,note
-1,2026-01-29T03:09:41.689439,501,REVENUE,88.2,Ingreso por venta confirmada
-2,2026-01-29T03:09:41.689439,501,COGS,47.38,Costo de venta estimado (unit_cost sintético)
-3,2026-01-29T03:10:05.304235,502,REVENUE,88.2,Ingreso por venta confirmada
-4,2026-01-29T03:10:05.304235,502,COGS,47.38,Costo de venta estimado (unit_cost sintético)
-5,2026-01-29T03:10:17.627447,503,REVENUE,88.2,Ingreso por venta confirmada
-6,2026-01-29T03:10:17.627447,503,COGS,47.38,Costo de venta estimado (unit_cost sintético)
+1,2026-02-05T01:09:20.299705,501,REVENUE,75.50999999999999,Ingreso por venta confirmada
+2,2026-02-05T01:09:20.299705,501,COGS,36.76,Costo de venta estimado (unit_cost sintético)

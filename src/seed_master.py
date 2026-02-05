@@ -22,22 +22,29 @@ def generate_master_data(df_raw: pd.DataFrame, seed: int = 42):
         }
         for i, cat in enumerate(categories, start=1)
     ])
+    # 1 producto por (food_item, category) — precio estándar = mediana
+    prod_keys = (
+        df_raw.groupby(["food_item", "category"], as_index=False)
+            .agg(sale_price=("price", "median"))
+    )
 
-    prod_keys = df_raw[["food_item", "category", "price"]].drop_duplicates().copy()
     prod_keys = prod_keys.sort_values(["category", "food_item"]).reset_index(drop=True)
     prod_keys["product_id"] = np.arange(1001, 1001 + len(prod_keys))
 
     margins = rng.uniform(0.35, 0.60, size=len(prod_keys))
-    prod_keys["unit_cost"] = (prod_keys["price"] * (1 - margins)).round(2)
+    prod_keys["unit_cost"] = (prod_keys["sale_price"] * (1 - margins)).round(2)
 
-    cat_to_supplier = {cat: int(suppliers.loc[suppliers["supplier_name"] == f"Proveedor {cat}", "supplier_id"].iloc[0])
-                       for cat in categories}
+    cat_to_supplier = {
+        cat: int(suppliers.loc[suppliers["supplier_name"] == f"Proveedor {cat}", "supplier_id"].iloc[0])
+        for cat in categories
+    }
     prod_keys["supplier_id"] = prod_keys["category"].map(cat_to_supplier)
 
-    products = prod_keys.rename(columns={"price": "sale_price"})[
+    products = prod_keys[
         ["product_id", "food_item", "category", "sale_price", "unit_cost", "supplier_id"]
     ]
 
+        
     demand = df_raw.groupby(["food_item", "category"])["quantity"].sum().reset_index()
     demand = demand.merge(products, on=["food_item", "category"], how="left")
 

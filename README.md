@@ -16,7 +16,7 @@ Coloca tu archivo **restaurant_orders.csv** en la carpeta raíz del proyecto (mi
 ## 3) Ejecutar demo (crea tablas + importa pedidos reales + corre TPS→ERP→SCM + KPIs)
 ```bash
 python -m src.run_demo
-```
+``` py -m streamlit run app.py
 
 ## 4) Qué crea en `tables_csv/`
 - `branches.csv`, `suppliers.csv`, `products.csv`, `inventory.csv`  (sintético)
@@ -26,3 +26,4 @@ python -m src.run_demo
 
 ## 5) Para el informe (texto listo)
 Mira el bloque `REPORT_TEXT` en `src/report_text.py`.
+
