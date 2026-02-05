@@ -1,10 +1,10 @@
-product_id,food_item,category,sale_price,unit_cost,supplier_id
-1001,Brownie,Dessert,13.24,5.76,1
-1002,Cake,Dessert,13.65,6.49,1
-1003,Ice Cream,Dessert,11.43,7.16,1
-1004,Burger,Main,11.86,4.82,2
-1005,Pasta,Main,15.055,6.92,2
-1006,Pizza,Main,11.879999999999999,5.39,2
-1007,Fries,Starter,15.245,9.42,3
-1008,Salad,Starter,13.11,7.05,3
-1009,Soup,Starter,14.11,7.86,3
+product_id,food_item,category,sale_price,unit_cost,supplier_id,is_active
+1001,Brownie,Dessert,12.165,5.3,1,1
+1002,Cake,Dessert,12.955,6.16,1,1
+1003,Ice Cream,Dessert,10.42,6.53,1,1
+1004,Burger,Main,12.61,5.12,2,1
+1005,Pasta,Main,16.28,7.48,2,1
+1006,Pizza,Main,10.14,4.6,2,1
+1007,Fries,Starter,10.24,6.33,3,1
+1008,Salad,Starter,15.76,8.47,3,1
+1009,Soup,Starter,10.575,5.89,3,1

@@ -1,1 +1,3 @@
-po_id,po_ts,supplier_id,branch_id,status,expected_date
+po_id,po_ts,supplier_id,branch_id,status,expected_date,received_ts
+1,2026-02-05T04:16:10.223501,1,1,RECEIVED,2026-02-05,2026-02-05T13:44:50.232858
+
