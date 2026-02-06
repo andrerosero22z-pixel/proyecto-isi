@@ -1,305 +1,305 @@
-customer_id,customer_name,recency_days,frequency,monetary,R,F,M,RFM,rfm_score_total,segmento
-13,Corey Rodriguez,87,3,120.49000000000001,3,5,5,355,13,Alto gasto
-21,Timothy Harris,92,5,141.6,3,5,5,355,13,Alto gasto
-74,Kevin Gonzalez,98,3,178.54,3,5,5,355,13,Alto gasto
-151,Larry Santiago,91,3,121.59,3,5,5,355,13,Alto gasto
-153,Michelle Rodriguez,78,4,181.07,3,5,5,355,13,Alto gasto
-271,Crystal Collier,102,3,206.82,3,5,5,355,13,Alto gasto
-67,Kimberly Barnett,98,2,109.42999999999999,3,4,5,345,12,Alto gasto
-138,Angela Sherman,102,2,107.92,3,4,5,345,12,Alto gasto
-165,Jerry Pineda,82,2,113.84,3,4,5,345,12,Alto gasto
-275,Joseph Hamilton,104,2,76.69,3,5,4,354,12,Alto gasto
-32,Monique Gonzalez,102,2,244.5,3,3,5,335,11,Alto gasto
-72,Mark Campbell,92,2,96.01,3,4,4,344,11,Alto gasto
-88,Scott Petty,108,2,80.53,3,4,4,344,11,Alto gasto
-109,Diane Garza,107,2,100.98,3,4,4,344,11,Alto gasto
-117,Nancy Shields,87,2,67.09,3,4,4,344,11,Alto gasto
-14,Brenda Contreras,85,2,95.18,3,3,4,334,10,Alto gasto
-35,Tamara Wu,87,2,100.67999999999999,3,3,4,334,10,Alto gasto
-189,Christopher Chapman,99,1,112.05,3,2,5,325,10,Alto gasto
-281,Sheri White,84,1,87.04,3,3,4,334,10,Alto gasto
-169,Richard Rodriguez,102,1,79.0,3,2,4,324,9,Alto gasto
-214,Courtney Dixon,83,1,69.04,3,2,4,324,9,Alto gasto
-120,Mary Curtis,108,1,101.3,3,1,4,314,8,Alto gasto
-9,Michele Ball,10,3,147.84,5,5,5,555,15,Campeones
-39,Brandy Terrell,5,5,207.07999999999998,5,5,5,555,15,Campeones
-51,Melissa Wolfe,23,4,159.98,5,5,5,555,15,Campeones
-80,Brittany Watson,16,3,131.95,5,5,5,555,15,Campeones
-84,Gregory Hicks MD,4,3,170.59,5,5,5,555,15,Campeones
-97,Caleb Little,31,4,200.32,5,5,5,555,15,Campeones
-131,Matthew Perry,15,4,140.82,5,5,5,555,15,Campeones
-174,Paul Cook,2,3,128.18,5,5,5,555,15,Campeones
-10,Mrs. Amber Hansen,55,3,135.17000000000002,4,5,5,455,14,Campeones
-17,Anthony Griffin,74,4,168.1,4,5,5,455,14,Campeones
-29,David Patel,61,4,206.9,4,5,5,455,14,Campeones
-38,Nicole Barrett,76,3,166.71,4,5,5,455,14,Campeones
-44,Johnny Dennis,49,3,108.99000000000001,4,5,5,455,14,Campeones
-50,Margaret Wells,69,4,143.32,4,5,5,455,14,Campeones
-56,Kristin Bennett,61,4,177.48999999999998,4,5,5,455,14,Campeones
-69,James Bradley,47,4,107.9,4,5,5,455,14,Campeones
-76,Barbara Ray,60,3,156.8,4,5,5,455,14,Campeones
-130,Dale Salinas,59,3,131.98,4,5,5,455,14,Campeones
-134,Daniel Jennings,4,2,109.14,5,4,5,545,14,Campeones
-139,Elizabeth Clark,18,3,91.09,5,5,4,554,14,Campeones
-140,Jason Rocha,58,4,199.36,4,5,5,455,14,Campeones
-224,Denise Murphy,65,2,172.9,4,5,5,455,14,Campeones
-235,Michael Woodward,11,2,90.57999999999998,5,5,4,554,14,Campeones
-239,Brandon King,1,2,86.60000000000001,5,5,4,554,14,Campeones
-257,Frank Pena,60,3,151.24,4,5,5,455,14,Campeones
-265,Bailey Pearson,56,2,145.29000000000002,4,5,5,455,14,Campeones
-274,Eric Garcia,14,2,98.45,5,5,4,554,14,Campeones
-46,Mark Randolph,11,2,76.4,5,4,4,544,13,Campeones
-53,Brittany Hughes,65,2,137.89,4,4,5,445,13,Campeones
-68,Melinda Levine,58,2,102.56,4,4,5,445,13,Campeones
-73,Carolyn Roberts,35,2,139.57999999999998,4,4,5,445,13,Campeones
-96,Andrea Reynolds,65,3,90.11,4,5,4,454,13,Campeones
-102,Veronica Pitts,33,2,157.85,4,4,5,445,13,Campeones
-115,Justin Howard,2,2,94.89,5,4,4,544,13,Campeones
-128,Margaret Burch,4,2,85.11,5,4,4,544,13,Campeones
-142,Susan Carter,22,2,79.49,5,4,4,544,13,Campeones
-161,David Gutierrez,69,2,106.28,4,4,5,445,13,Campeones
-175,Laura Archer,7,2,80.64,5,4,4,544,13,Campeones
-190,Wanda Gould,19,2,71.16,5,4,4,544,13,Campeones
-252,Catherine Martinez,74,3,78.69,4,5,4,454,13,Campeones
-55,Michael Matthews,60,2,91.1,4,4,4,444,12,Campeones
-61,Alyssa Anthony,59,2,79.99,4,4,4,444,12,Campeones
-125,Daniel Lee,59,2,78.04,4,4,4,444,12,Campeones
-201,Elizabeth Jones,57,2,100.41,4,4,4,444,12,Campeones
-231,Christopher Rodriguez,127,1,112.7,2,2,5,225,9,Dormidos
-250,Lauren Freeman,152,1,114.8,2,2,5,225,9,Dormidos
-205,Steven Gardner,166,1,115.75,1,2,5,125,8,Dormidos
-219,Luis Welch,147,1,96.45,2,2,4,224,8,Dormidos
-232,John Sutton,145,1,94.76,2,2,4,224,8,Dormidos
-16,Jennifer Friedman,128,1,72.84,2,1,4,214,7,Dormidos
-24,Don Davis,121,1,84.28,2,1,4,214,7,Dormidos
-113,Lisa Jones,123,1,89.84,2,1,4,214,7,Dormidos
-122,Thomas Huynh,130,1,93.88,2,1,4,214,7,Dormidos
-135,Mark Thomas,130,1,66.5,2,1,4,214,7,Dormidos
-164,Jeffrey Ortiz,115,1,61.3,2,2,3,223,7,Dormidos
-170,Curtis Brown,176,1,87.4,1,2,4,124,7,Dormidos
-181,Kelly Huang,199,1,73.88,1,2,4,124,7,Dormidos
-200,Joseph Butler,113,1,48.9,2,2,3,223,7,Dormidos
-210,Laura Valdez,214,1,70.28,1,2,4,124,7,Dormidos
-238,Preston Flynn,205,1,93.35,1,2,4,124,7,Dormidos
-246,Steven Melendez,129,1,46.71,2,2,3,223,7,Dormidos
-104,Melissa Curry,136,1,46.94,2,1,3,213,6,Dormidos
-124,Sandra Good,209,1,68.91,1,1,4,114,6,Dormidos
-157,Brandy Lewis,204,1,51.12,1,2,3,123,6,Dormidos
-220,Katelyn Brown,185,1,48.9,1,2,3,123,6,Dormidos
-228,Amanda Mcfarland,180,1,54.15,1,2,3,123,6,Dormidos
-245,Derek Young,215,1,45.1,1,2,3,123,6,Dormidos
-254,Lucas Santiago,133,1,37.68,2,2,2,222,6,Dormidos
-256,John Mckinney,138,1,29.92,2,2,2,222,6,Dormidos
-258,Matthew Hays,134,1,30.84,2,2,2,222,6,Dormidos
-11,Jeffrey Roberts,123,1,42.14,2,1,2,212,5,Dormidos
-19,Amy Browning,184,1,50.42999999999999,1,1,3,113,5,Dormidos
-52,Karen Hester,113,1,41.58,2,1,2,212,5,Dormidos
-70,Lisa Franklin,211,1,62.28,1,1,3,113,5,Dormidos
-82,Carl Olson,204,1,50.0,1,1,3,113,5,Dormidos
-85,Denise Thompson,222,1,42.88,1,1,3,113,5,Dormidos
-105,Jonathan Turner,166,1,51.96,1,1,3,113,5,Dormidos
-176,Andrew Reilly,158,1,15.93,2,2,1,221,5,Dormidos
-177,Pamela Moore,113,1,10.24,2,2,1,221,5,Dormidos
-178,Allison Lynch,141,1,19.48,2,2,1,221,5,Dormidos
-187,Kenneth Miranda,163,1,32.8,1,2,2,122,5,Dormidos
-218,Joshua Walls,156,1,12.61,2,2,1,221,5,Dormidos
-225,Sarah Ponce,117,1,16.07,2,2,1,221,5,Dormidos
-244,Thomas Aguirre,143,1,2.15,2,2,1,221,5,Dormidos
-30,Lisa Gregory,194,1,41.14,1,1,2,112,4,Dormidos
-59,Kenneth Coleman,155,1,15.9,2,1,1,211,4,Dormidos
-89,Jeffrey Hernandez,116,1,14.17,2,1,1,211,4,Dormidos
-98,Christina Donovan,201,1,39.44,1,1,2,112,4,Dormidos
-118,Wyatt Jackson,119,1,5.11,2,1,1,211,4,Dormidos
-136,Anthony Sherman,185,1,29.58,1,1,2,112,4,Dormidos
-146,Stephen Campbell,199,1,26.6,1,1,2,112,4,Dormidos
-180,Anthony Wells,205,1,11.52,1,2,1,121,4,Dormidos
-192,Amber Mendez,202,1,5.37,1,2,1,121,4,Dormidos
-199,Andrew Hill,190,1,12.55,1,2,1,121,4,Dormidos
-209,James Jones,198,1,12.76,1,2,1,121,4,Dormidos
-229,Kurt Washington,211,1,19.0,1,2,1,121,4,Dormidos
-247,James Chase,207,1,4.16,1,2,1,121,4,Dormidos
-18,Kenneth Ferguson,175,1,10.83,1,1,1,111,3,Dormidos
-45,Brian Wood,181,1,20.48,1,1,1,111,3,Dormidos
-58,Lisa Andrade,163,1,3.44,1,1,1,111,3,Dormidos
-79,Amanda Mahoney,183,1,4.56,1,1,1,111,3,Dormidos
-87,Morgan Simmons,215,1,6.91,1,1,1,111,3,Dormidos
-116,Joseph Kelley,174,1,17.04,1,1,1,111,3,Dormidos
-121,Brandi Houston,223,1,19.29,1,1,1,111,3,Dormidos
-123,Connie Roberts,161,1,19.62,1,1,1,111,3,Dormidos
-127,Jon Boyd,192,1,9.4,1,1,1,111,3,Dormidos
-137,Roberto Farrell,208,1,4.24,1,1,1,111,3,Dormidos
-145,Christopher Frederick,198,1,16.38,1,1,1,111,3,Dormidos
-155,Patricia Jenkins,183,1,16.02,1,1,1,111,3,Dormidos
-99,Mary Vega DDS,153,3,212.06,2,5,5,255,12,En riesgo
-204,Amy Mclean,125,2,107.38,2,5,5,255,12,En riesgo
-208,Jeffery Mason,123,2,103.57000000000001,2,5,5,255,12,En riesgo
-211,Teresa Rollins,139,2,115.35,2,5,5,255,12,En riesgo
-213,Ashley Dominguez,144,2,133.79,2,5,5,255,12,En riesgo
-66,Juan Lucero,145,2,112.37,2,4,5,245,11,En riesgo
-77,David Rodriguez,124,2,146.44,2,4,5,245,11,En riesgo
-95,Austin Cain,181,3,113.02000000000001,1,5,5,155,11,En riesgo
-112,Wesley Walters,140,2,102.65,2,4,5,245,11,En riesgo
-141,Shannon Young,114,2,106.11,2,4,5,245,11,En riesgo
-148,Ashley Poole,131,3,64.85,2,5,4,254,11,En riesgo
-159,Gavin Griffin,119,4,88.09,2,5,4,254,11,En riesgo
-182,Elizabeth Smith,143,2,108.04,2,4,5,245,11,En riesgo
-207,Troy Roberts,124,2,66.84,2,5,4,254,11,En riesgo
-48,Corey Roberts,157,2,81.62,2,4,4,244,10,En riesgo
-64,Nicholas Carter,194,2,112.6,1,4,5,145,10,En riesgo
-78,Christina Garcia,197,2,129.21,1,4,5,145,10,En riesgo
-119,Michael Skinner,206,2,108.30000000000001,1,4,5,145,10,En riesgo
-167,Eric Nguyen,153,2,97.72,2,4,4,244,10,En riesgo
-242,Jillian Jackson,161,2,99.84,1,5,4,154,10,En riesgo
-3,Kristy Nash,144,2,83.24,2,3,4,234,9,En riesgo
-162,Justin Powell,120,2,43.07,2,4,3,243,9,En riesgo
-171,Joe Barton,190,2,74.64,1,4,4,144,9,En riesgo
-203,Victoria Sims,125,2,28.47,2,5,2,252,9,En riesgo
-215,James Morgan,117,2,31.43,2,5,2,252,9,En riesgo
-248,Billy Wade,127,2,35.83,2,5,2,252,9,En riesgo
-4,Patrick Hammond,160,2,83.43,1,3,4,134,8,En riesgo
-42,Deanna Glover,169,2,77.1,1,3,4,134,8,En riesgo
-43,Fernando Burke,130,2,49.17,2,3,3,233,8,En riesgo
-90,Aimee White,154,2,24.7,2,4,2,242,8,En riesgo
-114,Kristy James,202,2,45.36,1,4,3,143,8,En riesgo
-198,Kimberly Tyler,147,2,33.09,2,4,2,242,8,En riesgo
-206,Jason Newman,160,2,42.29,1,5,2,152,8,En riesgo
-261,Christopher Kramer,145,1,63.04,2,3,3,233,8,En riesgo
-267,Michael Robinson,184,1,67.89,1,3,4,134,8,En riesgo
-268,James Butler,161,1,68.03999999999999,1,3,4,134,8,En riesgo
-272,Christina Adams,154,1,45.56,2,3,3,233,8,En riesgo
-298,Tiffany Gardner,178,1,102.5,1,3,4,134,8,En riesgo
-260,Jamie Phillips,206,1,45.35,1,3,3,133,7,En riesgo
-264,Jason Hill,159,1,24.18,2,3,2,232,7,En riesgo
-273,Brandy Smith,209,1,48.2,1,3,3,133,7,En riesgo
-282,Gerald Watson,156,1,36.42,2,3,2,232,7,En riesgo
-284,Diane Olson,205,1,50.96,1,3,3,133,7,En riesgo
-289,Adam Klein,183,1,42.3,1,3,3,133,7,En riesgo
-294,William Collins,127,1,31.26,2,3,2,232,7,En riesgo
-262,Carol Lynch,127,1,17.14,2,3,1,231,6,En riesgo
-263,Susan Glenn,141,1,3.5,2,3,1,231,6,En riesgo
-280,Crystal Landry,220,1,40.56,1,3,2,132,6,En riesgo
-287,Elizabeth Blake MD,112,1,16.28,2,3,1,231,6,En riesgo
-291,Billy Tapia,144,1,18.54,2,3,1,231,6,En riesgo
-296,Michael Valentine,134,1,18.14,2,3,1,231,6,En riesgo
-304,Jennifer Reed,120,1,15.35,2,3,1,231,6,En riesgo
-266,Antonio Pena,177,1,16.89,1,3,1,131,5,En riesgo
-278,Martin Estrada,222,1,4.09,1,3,1,131,5,En riesgo
-288,Timothy Miller,185,1,10.98,1,3,1,131,5,En riesgo
-290,Larry Higgins,164,1,11.34,1,3,1,131,5,En riesgo
-302,Evan Howard,164,1,19.76,1,3,1,131,5,En riesgo
-12,Donald Scott,32,2,120.03999999999999,5,3,5,535,13,Leales
-33,Janice Sanchez,32,2,140.56,5,3,5,535,13,Leales
-152,James Rose,19,3,60.92,5,5,3,553,13,Leales
-216,Raymond Cooper,18,2,42.42,5,5,3,553,13,Leales
-255,Amanda Cervantes,16,2,48.61,5,5,3,553,13,Leales
-259,Gary Phillips,28,2,55.910000000000004,5,5,3,553,13,Leales
-20,Mark Santiago,5,2,72.88,5,3,4,534,12,Leales
-28,Sara Garcia,43,3,42.69,4,5,3,453,12,Leales
-103,Elizabeth Stanley,32,2,62.31,5,4,3,543,12,Leales
-179,Heather Wheeler,17,2,63.5,5,4,3,543,12,Leales
-184,Mark Smith,16,2,58.14,5,4,3,543,12,Leales
-197,Mary Johnson,3,2,44.96,5,4,3,543,12,Leales
-253,Lisa Walters,11,2,25.619999999999997,5,5,2,552,12,Leales
-2,Douglas Bryant,4,2,54.010000000000005,5,3,3,533,11,Leales
-22,Darrell Wolfe,23,2,50.58,5,3,3,533,11,Leales
-34,Connor Williams,68,2,65.52,4,3,4,434,11,Leales
-49,Alexander Nielsen,31,2,24.4,5,4,2,542,11,Leales
-65,George Smith,64,3,34.82,4,5,2,452,11,Leales
-83,Heather Collins,69,2,57.1,4,4,3,443,11,Leales
-106,David Bailey,8,2,23.33,5,4,2,542,11,Leales
-108,David Hamilton,56,2,60.52,4,4,3,443,11,Leales
-111,Alicia Clark,76,2,64.09,4,4,3,443,11,Leales
-129,Michael Smith,59,2,50.94,4,4,3,443,11,Leales
-193,Larry Perry MD,50,2,62.28,4,4,3,443,11,Leales
-194,Cassandra Alexander,22,2,21.27,5,4,2,542,11,Leales
-195,Jeanette Hayes,66,2,63.059999999999995,4,4,3,443,11,Leales
-277,Regina Gill,73,2,38.24,4,5,2,452,11,Leales
-295,William Crane,19,1,54.63,5,3,3,533,11,Leales
-1,Suzanne Graham,48,2,50.66,4,3,3,433,10,Leales
-5,Mrs. Sheila Dean,15,2,21.84,5,3,2,532,10,Leales
-15,Brian Hernandez,2,2,28.58,5,3,2,532,10,Leales
-93,Jonathan Lynch,38,2,36.79,4,4,2,442,10,Leales
-107,Randall Decker,34,2,28.6,4,4,2,442,10,Leales
-150,Michael Miller,59,2,37.83,4,4,2,442,10,Leales
-188,Gregory Stephens,62,2,40.53,4,4,2,442,10,Leales
-230,Alexis Williams,67,2,12.46,4,5,1,451,10,Leales
-276,Jean Miller,27,1,35.04,5,3,2,532,10,Leales
-299,Alexander Wallace,55,1,46.64,4,3,3,433,10,Leales
-26,Jennifer Moreno,17,2,16.88,5,3,1,531,9,Leales
-269,Todd Brown,28,1,11.66,5,3,1,531,9,Leales
-279,Ana Brooks,18,1,13.2,5,3,1,531,9,Leales
-285,Wendy Nichols,73,1,22.14,4,3,2,432,9,Leales
-286,Nathan Harris,61,1,22.82,4,3,2,432,9,Leales
-300,Andrew Suarez,65,1,13.88,4,3,1,431,8,Leales
-160,Patrick Gibson,28,1,85.0,5,2,4,524,11,Nuevos
-172,Jonathan Smith,27,1,72.06,5,2,4,524,11,Nuevos
-196,Debbie Castillo,27,1,72.03,5,2,4,524,11,Nuevos
-221,Patrick Hanna,30,1,90.84,5,2,4,524,11,Nuevos
-54,Deborah Green,40,1,112.3,4,1,5,415,10,Nuevos
-71,Christopher Noble,39,1,117.35,4,1,5,415,10,Nuevos
-91,Patricia Smith,23,1,81.32,5,1,4,514,10,Nuevos
-147,Shannon Morales PhD,50,1,107.9,4,1,5,415,10,Nuevos
-212,Amy Brown,4,1,61.89,5,2,3,523,10,Nuevos
-234,Jason King,35,1,82.6,4,2,4,424,10,Nuevos
-37,Andrew Stephens,78,1,76.3,4,1,4,414,9,Nuevos
-133,Melissa Diaz,9,1,44.88,5,1,3,513,9,Nuevos
-186,Nichole Lopez,60,1,50.7,4,2,3,423,9,Nuevos
-236,Catherine Jenkins,33,1,49.16,4,2,3,423,9,Nuevos
-243,Stacy Wagner,76,1,43.8,4,2,3,423,9,Nuevos
-251,Jonathan Jones,24,1,24.5,5,2,2,522,9,Nuevos
-47,Jasmine Harvey,62,1,59.97,4,1,3,413,8,Nuevos
-60,Christina Johnson,17,1,37.72,5,1,2,512,8,Nuevos
-92,Erica Medina,19,1,40.95,5,1,2,512,8,Nuevos
-101,Diane Perez,24,1,26.9,5,1,2,512,8,Nuevos
-227,Robert Campbell,67,1,24.58,4,2,2,422,8,Nuevos
-240,Michael Roberts,16,1,7.68,5,2,1,521,8,Nuevos
-241,Kevin Meyer,17,1,12.0,5,2,1,521,8,Nuevos
-249,Ashley Wilson,70,1,38.56,4,2,2,422,8,Nuevos
-6,Dr. Rebekah Davenport,4,1,14.12,5,1,1,511,7,Nuevos
-25,Denise Ortega,10,1,16.82,5,1,1,511,7,Nuevos
-36,Brandon Myers,14,1,8.66,5,1,1,511,7,Nuevos
-81,Jennifer Barron,75,1,35.58,4,1,2,412,7,Nuevos
-94,Richard Lee,18,1,14.44,5,1,1,511,7,Nuevos
-110,Derek Delgado,70,1,34.76,4,1,2,412,7,Nuevos
-156,Emily Jackson,23,1,2.51,5,1,1,511,7,Nuevos
-168,Daniel Gomez,58,1,4.6,4,2,1,421,7,Nuevos
-233,Yvonne Davis,66,1,18.03,4,2,1,421,7,Nuevos
-143,Jennifer Santos,66,1,14.89,4,1,1,411,6,Nuevos
-63,William Rasmussen,109,3,45.49,3,5,3,353,11,Otros
-191,William Cross,99,3,62.5,3,5,3,353,11,Otros
-293,Anthony Armstrong,102,2,48.62,3,5,3,353,11,Otros
-132,Amy Ellis,95,2,43.78,3,4,3,343,10,Otros
-144,Aaron Clark,79,2,44.269999999999996,3,4,3,343,10,Otros
-163,James Nixon,93,2,56.8,3,4,3,343,10,Otros
-7,David Ellis,97,2,50.35,3,3,3,333,9,Otros
-8,Diana House,111,2,58.35,3,3,3,333,9,Otros
-27,Dr. James Garza,103,2,61.800000000000004,3,3,3,333,9,Otros
-100,Nathan Holland,112,2,35.32,3,4,2,342,9,Otros
-149,Christopher Romero,94,2,29.020000000000003,3,4,2,342,9,Otros
-158,Benjamin Stark,85,2,30.11,3,4,2,342,9,Otros
-23,Veronica Bray,96,2,33.15,3,3,2,332,8,Otros
-202,Eric Moss,97,1,64.24,3,2,3,323,8,Otros
-237,Danielle Carey,107,1,57.21,3,2,3,323,8,Otros
-270,John Fisher,110,1,21.83,3,3,2,332,8,Otros
-283,Kevin Walker,85,1,30.24,3,3,2,332,8,Otros
-297,Marvin Bonilla,106,1,24.93,3,3,2,332,8,Otros
-301,Julie Tucker,108,1,37.29,3,3,2,332,8,Otros
-303,Hannah Brown,100,1,21.85,3,3,2,332,8,Otros
-75,Brian Brown,99,1,47.1,3,1,3,313,7,Otros
-166,Jennifer Snyder,85,1,26.88,3,2,2,322,7,Otros
-173,Patricia Nunez,102,1,32.52,3,2,2,322,7,Otros
-183,Lisa Mora,93,1,23.02,3,2,2,322,7,Otros
-222,Tamara Winters,108,1,30.0,3,2,2,322,7,Otros
-292,Cindy Smith,106,1,6.48,3,3,1,331,7,Otros
-41,Sherry Rogers,97,1,37.83,3,1,2,312,6,Otros
-57,Amanda Jones,79,1,41.84,3,1,2,312,6,Otros
-62,Jennifer Williams,102,1,38.8,3,1,2,312,6,Otros
-126,Jean Morris,78,1,25.62,3,1,2,312,6,Otros
-154,Lori James,95,1,38.8,3,1,2,312,6,Otros
-185,Deborah Morris,104,1,17.87,3,2,1,321,6,Otros
-217,Francisco Ramos,101,1,13.24,3,2,1,321,6,Otros
-223,Thomas Burch,94,1,12.0,3,2,1,321,6,Otros
-226,Tiffany Scott,99,1,8.24,3,2,1,321,6,Otros
-31,Ashley Davis,86,1,17.27,3,1,1,311,5,Otros
-40,Catherine Thompson,99,1,7.77,3,1,1,311,5,Otros
-86,Ivan Haynes,106,1,8.73,3,1,1,311,5,Otros
+customer_id,customer_name,recency_days,frequency,monetary,segmento,R,F,M,RFM,rfm_score_total
+13,Corey Rodriguez,87,3,120.49000000000001,Alto gasto,3,5,5,355,13
+21,Timothy Harris,92,5,141.6,Alto gasto,3,5,5,355,13
+74,Kevin Gonzalez,98,3,178.54,Alto gasto,3,5,5,355,13
+151,Larry Santiago,91,3,121.59,Alto gasto,3,5,5,355,13
+153,Michelle Rodriguez,78,4,181.07,Alto gasto,3,5,5,355,13
+271,Crystal Collier,102,3,206.82,Alto gasto,3,5,5,355,13
+67,Kimberly Barnett,98,2,109.42999999999999,Alto gasto,3,4,5,345,12
+138,Angela Sherman,102,2,107.92,Alto gasto,3,4,5,345,12
+165,Jerry Pineda,82,2,113.84,Alto gasto,3,4,5,345,12
+275,Joseph Hamilton,104,2,76.69,Alto gasto,3,5,4,354,12
+32,Monique Gonzalez,102,2,244.5,Alto gasto,3,3,5,335,11
+72,Mark Campbell,92,2,96.01,Alto gasto,3,4,4,344,11
+88,Scott Petty,108,2,80.53,Alto gasto,3,4,4,344,11
+109,Diane Garza,107,2,100.98,Alto gasto,3,4,4,344,11
+117,Nancy Shields,87,2,67.09,Alto gasto,3,4,4,344,11
+14,Brenda Contreras,85,2,95.18,Alto gasto,3,3,4,334,10
+35,Tamara Wu,87,2,100.67999999999999,Alto gasto,3,3,4,334,10
+189,Christopher Chapman,99,1,112.05,Alto gasto,3,2,5,325,10
+281,Sheri White,84,1,87.04,Alto gasto,3,3,4,334,10
+169,Richard Rodriguez,102,1,79.0,Alto gasto,3,2,4,324,9
+214,Courtney Dixon,83,1,69.04,Alto gasto,3,2,4,324,9
+120,Mary Curtis,108,1,101.3,Alto gasto,3,1,4,314,8
+9,Michele Ball,10,3,147.84,Campeones,5,5,5,555,15
+39,Brandy Terrell,5,5,207.07999999999998,Campeones,5,5,5,555,15
+51,Melissa Wolfe,23,4,159.98,Campeones,5,5,5,555,15
+80,Brittany Watson,16,3,131.95,Campeones,5,5,5,555,15
+84,Gregory Hicks MD,4,3,170.59,Campeones,5,5,5,555,15
+97,Caleb Little,31,4,200.32,Campeones,5,5,5,555,15
+131,Matthew Perry,15,4,140.82,Campeones,5,5,5,555,15
+174,Paul Cook,2,3,128.18,Campeones,5,5,5,555,15
+10,Mrs. Amber Hansen,55,3,135.17000000000002,Campeones,4,5,5,455,14
+17,Anthony Griffin,74,4,168.1,Campeones,4,5,5,455,14
+29,David Patel,61,4,206.9,Campeones,4,5,5,455,14
+38,Nicole Barrett,76,3,166.71,Campeones,4,5,5,455,14
+44,Johnny Dennis,49,3,108.99000000000001,Campeones,4,5,5,455,14
+50,Margaret Wells,69,4,143.32,Campeones,4,5,5,455,14
+56,Kristin Bennett,61,4,177.48999999999998,Campeones,4,5,5,455,14
+69,James Bradley,47,4,107.9,Campeones,4,5,5,455,14
+76,Barbara Ray,60,3,156.8,Campeones,4,5,5,455,14
+130,Dale Salinas,59,3,131.98,Campeones,4,5,5,455,14
+134,Daniel Jennings,4,2,109.14,Campeones,5,4,5,545,14
+139,Elizabeth Clark,18,3,91.09,Campeones,5,5,4,554,14
+140,Jason Rocha,58,4,199.36,Campeones,4,5,5,455,14
+224,Denise Murphy,65,2,172.9,Campeones,4,5,5,455,14
+235,Michael Woodward,11,2,90.57999999999998,Campeones,5,5,4,554,14
+239,Brandon King,1,2,86.60000000000001,Campeones,5,5,4,554,14
+257,Frank Pena,60,3,151.24,Campeones,4,5,5,455,14
+265,Bailey Pearson,56,2,145.29000000000002,Campeones,4,5,5,455,14
+274,Eric Garcia,14,2,98.45,Campeones,5,5,4,554,14
+46,Mark Randolph,11,2,76.4,Campeones,5,4,4,544,13
+53,Brittany Hughes,65,2,137.89,Campeones,4,4,5,445,13
+68,Melinda Levine,58,2,102.56,Campeones,4,4,5,445,13
+73,Carolyn Roberts,35,2,139.57999999999998,Campeones,4,4,5,445,13
+96,Andrea Reynolds,65,3,90.11,Campeones,4,5,4,454,13
+102,Veronica Pitts,33,2,157.85,Campeones,4,4,5,445,13
+115,Justin Howard,2,2,94.89,Campeones,5,4,4,544,13
+128,Margaret Burch,4,2,85.11,Campeones,5,4,4,544,13
+142,Susan Carter,22,2,79.49,Campeones,5,4,4,544,13
+161,David Gutierrez,69,2,106.28,Campeones,4,4,5,445,13
+175,Laura Archer,7,2,80.64,Campeones,5,4,4,544,13
+190,Wanda Gould,19,2,71.16,Campeones,5,4,4,544,13
+252,Catherine Martinez,74,3,78.69,Campeones,4,5,4,454,13
+55,Michael Matthews,60,2,91.1,Campeones,4,4,4,444,12
+61,Alyssa Anthony,59,2,79.99,Campeones,4,4,4,444,12
+125,Daniel Lee,59,2,78.04,Campeones,4,4,4,444,12
+201,Elizabeth Jones,57,2,100.41,Campeones,4,4,4,444,12
+231,Christopher Rodriguez,127,1,112.7,Dormidos,2,2,5,225,9
+250,Lauren Freeman,152,1,114.8,Dormidos,2,2,5,225,9
+205,Steven Gardner,166,1,115.75,Dormidos,1,2,5,125,8
+219,Luis Welch,147,1,96.45,Dormidos,2,2,4,224,8
+232,John Sutton,145,1,94.76,Dormidos,2,2,4,224,8
+16,Jennifer Friedman,128,1,72.84,Dormidos,2,1,4,214,7
+24,Don Davis,121,1,84.28,Dormidos,2,1,4,214,7
+113,Lisa Jones,123,1,89.84,Dormidos,2,1,4,214,7
+122,Thomas Huynh,130,1,93.88,Dormidos,2,1,4,214,7
+135,Mark Thomas,130,1,66.5,Dormidos,2,1,4,214,7
+164,Jeffrey Ortiz,115,1,61.3,Dormidos,2,2,3,223,7
+170,Curtis Brown,176,1,87.4,Dormidos,1,2,4,124,7
+181,Kelly Huang,199,1,73.88,Dormidos,1,2,4,124,7
+200,Joseph Butler,113,1,48.9,Dormidos,2,2,3,223,7
+210,Laura Valdez,214,1,70.28,Dormidos,1,2,4,124,7
+238,Preston Flynn,205,1,93.35,Dormidos,1,2,4,124,7
+246,Steven Melendez,129,1,46.71,Dormidos,2,2,3,223,7
+104,Melissa Curry,136,1,46.94,Dormidos,2,1,3,213,6
+124,Sandra Good,209,1,68.91,Dormidos,1,1,4,114,6
+157,Brandy Lewis,204,1,51.12,Dormidos,1,2,3,123,6
+220,Katelyn Brown,185,1,48.9,Dormidos,1,2,3,123,6
+228,Amanda Mcfarland,180,1,54.15,Dormidos,1,2,3,123,6
+245,Derek Young,215,1,45.1,Dormidos,1,2,3,123,6
+254,Lucas Santiago,133,1,37.68,Dormidos,2,2,2,222,6
+256,John Mckinney,138,1,29.92,Dormidos,2,2,2,222,6
+258,Matthew Hays,134,1,30.84,Dormidos,2,2,2,222,6
+11,Jeffrey Roberts,123,1,42.14,Dormidos,2,1,2,212,5
+19,Amy Browning,184,1,50.42999999999999,Dormidos,1,1,3,113,5
+52,Karen Hester,113,1,41.58,Dormidos,2,1,2,212,5
+70,Lisa Franklin,211,1,62.28,Dormidos,1,1,3,113,5
+82,Carl Olson,204,1,50.0,Dormidos,1,1,3,113,5
+85,Denise Thompson,222,1,42.88,Dormidos,1,1,3,113,5
+105,Jonathan Turner,166,1,51.96,Dormidos,1,1,3,113,5
+176,Andrew Reilly,158,1,15.93,Dormidos,2,2,1,221,5
+177,Pamela Moore,113,1,10.24,Dormidos,2,2,1,221,5
+178,Allison Lynch,141,1,19.48,Dormidos,2,2,1,221,5
+187,Kenneth Miranda,163,1,32.8,Dormidos,1,2,2,122,5
+218,Joshua Walls,156,1,12.61,Dormidos,2,2,1,221,5
+225,Sarah Ponce,117,1,16.07,Dormidos,2,2,1,221,5
+244,Thomas Aguirre,143,1,2.15,Dormidos,2,2,1,221,5
+30,Lisa Gregory,194,1,41.14,Dormidos,1,1,2,112,4
+59,Kenneth Coleman,155,1,15.9,Dormidos,2,1,1,211,4
+89,Jeffrey Hernandez,116,1,14.17,Dormidos,2,1,1,211,4
+98,Christina Donovan,201,1,39.44,Dormidos,1,1,2,112,4
+118,Wyatt Jackson,119,1,5.11,Dormidos,2,1,1,211,4
+136,Anthony Sherman,185,1,29.58,Dormidos,1,1,2,112,4
+146,Stephen Campbell,199,1,26.6,Dormidos,1,1,2,112,4
+180,Anthony Wells,205,1,11.52,Dormidos,1,2,1,121,4
+192,Amber Mendez,202,1,5.37,Dormidos,1,2,1,121,4
+199,Andrew Hill,190,1,12.55,Dormidos,1,2,1,121,4
+209,James Jones,198,1,12.76,Dormidos,1,2,1,121,4
+229,Kurt Washington,211,1,19.0,Dormidos,1,2,1,121,4
+247,James Chase,207,1,4.16,Dormidos,1,2,1,121,4
+18,Kenneth Ferguson,175,1,10.83,Dormidos,1,1,1,111,3
+45,Brian Wood,181,1,20.48,Dormidos,1,1,1,111,3
+58,Lisa Andrade,163,1,3.44,Dormidos,1,1,1,111,3
+79,Amanda Mahoney,183,1,4.56,Dormidos,1,1,1,111,3
+87,Morgan Simmons,215,1,6.91,Dormidos,1,1,1,111,3
+116,Joseph Kelley,174,1,17.04,Dormidos,1,1,1,111,3
+121,Brandi Houston,223,1,19.29,Dormidos,1,1,1,111,3
+123,Connie Roberts,161,1,19.62,Dormidos,1,1,1,111,3
+127,Jon Boyd,192,1,9.4,Dormidos,1,1,1,111,3
+137,Roberto Farrell,208,1,4.24,Dormidos,1,1,1,111,3
+145,Christopher Frederick,198,1,16.38,Dormidos,1,1,1,111,3
+155,Patricia Jenkins,183,1,16.02,Dormidos,1,1,1,111,3
+99,Mary Vega DDS,153,3,212.06,En riesgo,2,5,5,255,12
+204,Amy Mclean,125,2,107.38,En riesgo,2,5,5,255,12
+208,Jeffery Mason,123,2,103.57000000000001,En riesgo,2,5,5,255,12
+211,Teresa Rollins,139,2,115.35,En riesgo,2,5,5,255,12
+213,Ashley Dominguez,144,2,133.79,En riesgo,2,5,5,255,12
+66,Juan Lucero,145,2,112.37,En riesgo,2,4,5,245,11
+77,David Rodriguez,124,2,146.44,En riesgo,2,4,5,245,11
+95,Austin Cain,181,3,113.02000000000001,En riesgo,1,5,5,155,11
+112,Wesley Walters,140,2,102.65,En riesgo,2,4,5,245,11
+141,Shannon Young,114,2,106.11,En riesgo,2,4,5,245,11
+148,Ashley Poole,131,3,64.85,En riesgo,2,5,4,254,11
+159,Gavin Griffin,119,4,88.09,En riesgo,2,5,4,254,11
+182,Elizabeth Smith,143,2,108.04,En riesgo,2,4,5,245,11
+207,Troy Roberts,124,2,66.84,En riesgo,2,5,4,254,11
+48,Corey Roberts,157,2,81.62,En riesgo,2,4,4,244,10
+64,Nicholas Carter,194,2,112.6,En riesgo,1,4,5,145,10
+78,Christina Garcia,197,2,129.21,En riesgo,1,4,5,145,10
+119,Michael Skinner,206,2,108.30000000000001,En riesgo,1,4,5,145,10
+167,Eric Nguyen,153,2,97.72,En riesgo,2,4,4,244,10
+242,Jillian Jackson,161,2,99.84,En riesgo,1,5,4,154,10
+3,Kristy Nash,144,2,83.24,En riesgo,2,3,4,234,9
+162,Justin Powell,120,2,43.07,En riesgo,2,4,3,243,9
+171,Joe Barton,190,2,74.64,En riesgo,1,4,4,144,9
+203,Victoria Sims,125,2,28.47,En riesgo,2,5,2,252,9
+215,James Morgan,117,2,31.43,En riesgo,2,5,2,252,9
+248,Billy Wade,127,2,35.83,En riesgo,2,5,2,252,9
+4,Patrick Hammond,160,2,83.43,En riesgo,1,3,4,134,8
+42,Deanna Glover,169,2,77.1,En riesgo,1,3,4,134,8
+43,Fernando Burke,130,2,49.17,En riesgo,2,3,3,233,8
+90,Aimee White,154,2,24.7,En riesgo,2,4,2,242,8
+114,Kristy James,202,2,45.36,En riesgo,1,4,3,143,8
+198,Kimberly Tyler,147,2,33.09,En riesgo,2,4,2,242,8
+206,Jason Newman,160,2,42.29,En riesgo,1,5,2,152,8
+261,Christopher Kramer,145,1,63.04,En riesgo,2,3,3,233,8
+267,Michael Robinson,184,1,67.89,En riesgo,1,3,4,134,8
+268,James Butler,161,1,68.03999999999999,En riesgo,1,3,4,134,8
+272,Christina Adams,154,1,45.56,En riesgo,2,3,3,233,8
+298,Tiffany Gardner,178,1,102.5,En riesgo,1,3,4,134,8
+260,Jamie Phillips,206,1,45.35,En riesgo,1,3,3,133,7
+264,Jason Hill,159,1,24.18,En riesgo,2,3,2,232,7
+273,Brandy Smith,209,1,48.2,En riesgo,1,3,3,133,7
+282,Gerald Watson,156,1,36.42,En riesgo,2,3,2,232,7
+284,Diane Olson,205,1,50.96,En riesgo,1,3,3,133,7
+289,Adam Klein,183,1,42.3,En riesgo,1,3,3,133,7
+294,William Collins,127,1,31.26,En riesgo,2,3,2,232,7
+262,Carol Lynch,127,1,17.14,En riesgo,2,3,1,231,6
+263,Susan Glenn,141,1,3.5,En riesgo,2,3,1,231,6
+280,Crystal Landry,220,1,40.56,En riesgo,1,3,2,132,6
+287,Elizabeth Blake MD,112,1,16.28,En riesgo,2,3,1,231,6
+291,Billy Tapia,144,1,18.54,En riesgo,2,3,1,231,6
+296,Michael Valentine,134,1,18.14,En riesgo,2,3,1,231,6
+304,Jennifer Reed,120,1,15.35,En riesgo,2,3,1,231,6
+266,Antonio Pena,177,1,16.89,En riesgo,1,3,1,131,5
+278,Martin Estrada,222,1,4.09,En riesgo,1,3,1,131,5
+288,Timothy Miller,185,1,10.98,En riesgo,1,3,1,131,5
+290,Larry Higgins,164,1,11.34,En riesgo,1,3,1,131,5
+302,Evan Howard,164,1,19.76,En riesgo,1,3,1,131,5
+12,Donald Scott,32,2,120.03999999999999,Leales,5,3,5,535,13
+33,Janice Sanchez,32,2,140.56,Leales,5,3,5,535,13
+152,James Rose,19,3,60.92,Leales,5,5,3,553,13
+216,Raymond Cooper,18,2,42.42,Leales,5,5,3,553,13
+255,Amanda Cervantes,16,2,48.61,Leales,5,5,3,553,13
+259,Gary Phillips,28,2,55.910000000000004,Leales,5,5,3,553,13
+20,Mark Santiago,5,2,72.88,Leales,5,3,4,534,12
+28,Sara Garcia,43,3,42.69,Leales,4,5,3,453,12
+103,Elizabeth Stanley,32,2,62.31,Leales,5,4,3,543,12
+179,Heather Wheeler,17,2,63.5,Leales,5,4,3,543,12
+184,Mark Smith,16,2,58.14,Leales,5,4,3,543,12
+197,Mary Johnson,3,2,44.96,Leales,5,4,3,543,12
+253,Lisa Walters,11,2,25.619999999999997,Leales,5,5,2,552,12
+2,Douglas Bryant,4,2,54.010000000000005,Leales,5,3,3,533,11
+22,Darrell Wolfe,23,2,50.58,Leales,5,3,3,533,11
+34,Connor Williams,68,2,65.52,Leales,4,3,4,434,11
+49,Alexander Nielsen,31,2,24.4,Leales,5,4,2,542,11
+65,George Smith,64,3,34.82,Leales,4,5,2,452,11
+83,Heather Collins,69,2,57.1,Leales,4,4,3,443,11
+106,David Bailey,8,2,23.33,Leales,5,4,2,542,11
+108,David Hamilton,56,2,60.52,Leales,4,4,3,443,11
+111,Alicia Clark,76,2,64.09,Leales,4,4,3,443,11
+129,Michael Smith,59,2,50.94,Leales,4,4,3,443,11
+193,Larry Perry MD,50,2,62.28,Leales,4,4,3,443,11
+194,Cassandra Alexander,22,2,21.27,Leales,5,4,2,542,11
+195,Jeanette Hayes,66,2,63.059999999999995,Leales,4,4,3,443,11
+277,Regina Gill,73,2,38.24,Leales,4,5,2,452,11
+295,William Crane,19,1,54.63,Leales,5,3,3,533,11
+1,Suzanne Graham,48,2,50.66,Leales,4,3,3,433,10
+5,Mrs. Sheila Dean,15,2,21.84,Leales,5,3,2,532,10
+15,Brian Hernandez,2,2,28.58,Leales,5,3,2,532,10
+93,Jonathan Lynch,38,2,36.79,Leales,4,4,2,442,10
+107,Randall Decker,34,2,28.6,Leales,4,4,2,442,10
+150,Michael Miller,59,2,37.83,Leales,4,4,2,442,10
+188,Gregory Stephens,62,2,40.53,Leales,4,4,2,442,10
+230,Alexis Williams,67,2,12.46,Leales,4,5,1,451,10
+276,Jean Miller,27,1,35.04,Leales,5,3,2,532,10
+299,Alexander Wallace,55,1,46.64,Leales,4,3,3,433,10
+26,Jennifer Moreno,17,2,16.88,Leales,5,3,1,531,9
+269,Todd Brown,28,1,11.66,Leales,5,3,1,531,9
+279,Ana Brooks,18,1,13.2,Leales,5,3,1,531,9
+285,Wendy Nichols,73,1,22.14,Leales,4,3,2,432,9
+286,Nathan Harris,61,1,22.82,Leales,4,3,2,432,9
+300,Andrew Suarez,65,1,13.88,Leales,4,3,1,431,8
+160,Patrick Gibson,28,1,85.0,Nuevos,5,2,4,524,11
+172,Jonathan Smith,27,1,72.06,Nuevos,5,2,4,524,11
+196,Debbie Castillo,27,1,72.03,Nuevos,5,2,4,524,11
+221,Patrick Hanna,30,1,90.84,Nuevos,5,2,4,524,11
+54,Deborah Green,40,1,112.3,Nuevos,4,1,5,415,10
+71,Christopher Noble,39,1,117.35,Nuevos,4,1,5,415,10
+91,Patricia Smith,23,1,81.32,Nuevos,5,1,4,514,10
+147,Shannon Morales PhD,50,1,107.9,Nuevos,4,1,5,415,10
+212,Amy Brown,4,1,61.89,Nuevos,5,2,3,523,10
+234,Jason King,35,1,82.6,Nuevos,4,2,4,424,10
+37,Andrew Stephens,78,1,76.3,Nuevos,4,1,4,414,9
+133,Melissa Diaz,9,1,44.88,Nuevos,5,1,3,513,9
+186,Nichole Lopez,60,1,50.7,Nuevos,4,2,3,423,9
+236,Catherine Jenkins,33,1,49.16,Nuevos,4,2,3,423,9
+243,Stacy Wagner,76,1,43.8,Nuevos,4,2,3,423,9
+251,Jonathan Jones,24,1,24.5,Nuevos,5,2,2,522,9
+47,Jasmine Harvey,62,1,59.97,Nuevos,4,1,3,413,8
+60,Christina Johnson,17,1,37.72,Nuevos,5,1,2,512,8
+92,Erica Medina,19,1,40.95,Nuevos,5,1,2,512,8
+101,Diane Perez,24,1,26.9,Nuevos,5,1,2,512,8
+227,Robert Campbell,67,1,24.58,Nuevos,4,2,2,422,8
+240,Michael Roberts,16,1,7.68,Nuevos,5,2,1,521,8
+241,Kevin Meyer,17,1,12.0,Nuevos,5,2,1,521,8
+249,Ashley Wilson,70,1,38.56,Nuevos,4,2,2,422,8
+6,Dr. Rebekah Davenport,4,1,14.12,Nuevos,5,1,1,511,7
+25,Denise Ortega,10,1,16.82,Nuevos,5,1,1,511,7
+36,Brandon Myers,14,1,8.66,Nuevos,5,1,1,511,7
+81,Jennifer Barron,75,1,35.58,Nuevos,4,1,2,412,7
+94,Richard Lee,18,1,14.44,Nuevos,5,1,1,511,7
+110,Derek Delgado,70,1,34.76,Nuevos,4,1,2,412,7
+156,Emily Jackson,23,1,2.51,Nuevos,5,1,1,511,7
+168,Daniel Gomez,58,1,4.6,Nuevos,4,2,1,421,7
+233,Yvonne Davis,66,1,18.03,Nuevos,4,2,1,421,7
+143,Jennifer Santos,66,1,14.89,Nuevos,4,1,1,411,6
+63,William Rasmussen,109,3,45.49,Otros,3,5,3,353,11
+191,William Cross,99,3,62.5,Otros,3,5,3,353,11
+293,Anthony Armstrong,102,2,48.62,Otros,3,5,3,353,11
+132,Amy Ellis,95,2,43.78,Otros,3,4,3,343,10
+144,Aaron Clark,79,2,44.269999999999996,Otros,3,4,3,343,10
+163,James Nixon,93,2,56.8,Otros,3,4,3,343,10
+7,David Ellis,97,2,50.35,Otros,3,3,3,333,9
+8,Diana House,111,2,58.35,Otros,3,3,3,333,9
+27,Dr. James Garza,103,2,61.800000000000004,Otros,3,3,3,333,9
+100,Nathan Holland,112,2,35.32,Otros,3,4,2,342,9
+149,Christopher Romero,94,2,29.020000000000003,Otros,3,4,2,342,9
+158,Benjamin Stark,85,2,30.11,Otros,3,4,2,342,9
+23,Veronica Bray,96,2,33.15,Otros,3,3,2,332,8
+202,Eric Moss,97,1,64.24,Otros,3,2,3,323,8
+237,Danielle Carey,107,1,57.21,Otros,3,2,3,323,8
+270,John Fisher,110,1,21.83,Otros,3,3,2,332,8
+283,Kevin Walker,85,1,30.24,Otros,3,3,2,332,8
+297,Marvin Bonilla,106,1,24.93,Otros,3,3,2,332,8
+301,Julie Tucker,108,1,37.29,Otros,3,3,2,332,8
+303,Hannah Brown,100,1,21.85,Otros,3,3,2,332,8
+75,Brian Brown,99,1,47.1,Otros,3,1,3,313,7
+166,Jennifer Snyder,85,1,26.88,Otros,3,2,2,322,7
+173,Patricia Nunez,102,1,32.52,Otros,3,2,2,322,7
+183,Lisa Mora,93,1,23.02,Otros,3,2,2,322,7
+222,Tamara Winters,108,1,30.0,Otros,3,2,2,322,7
+292,Cindy Smith,106,1,6.48,Otros,3,3,1,331,7
+41,Sherry Rogers,97,1,37.83,Otros,3,1,2,312,6
+57,Amanda Jones,79,1,41.84,Otros,3,1,2,312,6
+62,Jennifer Williams,102,1,38.8,Otros,3,1,2,312,6
+126,Jean Morris,78,1,25.62,Otros,3,1,2,312,6
+154,Lori James,95,1,38.8,Otros,3,1,2,312,6
+185,Deborah Morris,104,1,17.87,Otros,3,2,1,321,6
+217,Francisco Ramos,101,1,13.24,Otros,3,2,1,321,6
+223,Thomas Burch,94,1,12.0,Otros,3,2,1,321,6
+226,Tiffany Scott,99,1,8.24,Otros,3,2,1,321,6
+31,Ashley Davis,86,1,17.27,Otros,3,1,1,311,5
+40,Catherine Thompson,99,1,7.77,Otros,3,1,1,311,5
+86,Ivan Haynes,106,1,8.73,Otros,3,1,1,311,5

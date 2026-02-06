@@ -281,7 +281,7 @@ def tps_add_item(order_id, product_id, qty):
 
 # ====== UI (AQUÍ VA PRIMERO EL TITLE + TABS) ======
 st.title(" Verona Restaurant ")
-tab_tps, tab_kpis, tab_rfm, tab_ops = st.tabs(["🧾 TPS", "📊 KPIs", "🧠 RFM", "⚙️ ERP / SCM"])
+tab_kpis, tab_rfm, tab_ops,tab_tps = st.tabs([" KPIs", " RFM", "ERP / SCM","TPS"])
 
 
 customers = read_table("customers")
@@ -297,95 +297,6 @@ if customers.empty:
     st.error("No existe customers.csv. Corre primero: py -m src.run_demo")
     st.stop()
 
-
-# ====== TAB TPS ======
-with tab_tps:
-    st.subheader("👤 Crear nuevo cliente")
-
-    new_name = st.text_input("Nombre del nuevo cliente (ej: Juan Perez)")
-    if st.button("➕ Guardar cliente"):
-        new_name = new_name.strip()
-        if len(new_name) < 3:
-            st.warning("Escribe un nombre válido (mínimo 3 caracteres).")
-        else:
-            customers2 = read_table("customers")
-            if (customers2["customer_name"].astype(str).str.lower() == new_name.lower()).any():
-                st.warning("Ese cliente ya existe.")
-            else:
-                new_id = next_id("customers", "customer_id", 1)
-                append_table("customers", pd.DataFrame([{
-                    "customer_id": new_id,
-                    "customer_name": new_name,
-                    "created_at": datetime.utcnow().isoformat()
-                }]))
-                st.success(f"✅ Cliente creado con ID {new_id}.")
-                st.rerun()
-
-    # TPS UI
-    
-    customers = read_table("customers")
-    products  = read_table("products")
-    if "is_active" in products.columns:
-        products["is_active"] = pd.to_numeric(products["is_active"], errors="coerce").fillna(1).astype(int)
-        products = products[products["is_active"] == 1]
-    branches  = read_table("branches")
-
-    cust_opt = {f'{r.customer_id} - {r.customer_name}': int(r.customer_id) for _, r in customers.iterrows()}
-    prod_opt = {f'{r.product_id} - {r.food_item} ({r.category}) ${r.sale_price}': int(r.product_id) for _, r in products.iterrows()}
-    branch_opt = {f'{r.branch_id} - {r.branch_name}': int(r.branch_id) for _, r in branches.iterrows()}
-
-    if "order_id" not in st.session_state:
-        st.session_state.order_id = None
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        cust_key = st.selectbox("Cliente", list(cust_opt.keys()))
-    with col2:
-        br_key = st.selectbox("Sucursal", list(branch_opt.keys()))
-    with col3:
-        pay = st.selectbox("Pago", ["Cash","Card","Transfer"])
-
-    if st.button("➕ Nuevo pedido"):
-        st.session_state.order_id = tps_create_order(cust_opt[cust_key], branch_opt[br_key], pay)
-        st.success(f"Pedido creado: #{st.session_state.order_id}")
-
-    st.subheader("🛒 Carrito")
-    if st.session_state.order_id is None:
-        st.info("Crea un pedido para empezar.")
-    else:
-        pkey = st.selectbox("Producto", list(prod_opt.keys()))
-        qty = st.number_input("Cantidad", min_value=1, max_value=50, value=1)
-
-        if st.button("Agregar item"):
-            try:
-                tps_add_item(st.session_state.order_id, prod_opt[pkey], int(qty))
-                st.success("✅ Item agregado.")
-                st.rerun()
-            except ValueError as e:
-                st.error(str(e))
-
-
-
-        items = read_table("order_items")
-        prod = read_table("products")
-        cart = items[items["order_id"] == st.session_state.order_id].merge(
-            prod[["product_id","food_item","category"]], on="product_id", how="left"
-        )
-        st.dataframe(cart[["food_item","category","quantity","unit_price","line_total"]])
-
-        if st.button("💳 Checkout (pagar)"):
-            alertas = tps_checkout(st.session_state.order_id)
-            st.success("✅ Checkout completado. ERP actualizado y stock descontado.")
-
-            if alertas:
-                st.session_state["alertas_reabastecer"] = alertas
-                st.warning("⚠️ Stock bajo mínimo. Debes abastecerte (crear Orden de Compra).")
-            else:
-                st.session_state["alertas_reabastecer"] = []
-
-            
-    
-    
 
 
 # ====== TAB KPIs
@@ -423,73 +334,93 @@ with tab_kpis:
     col5.metric("Sucursales activas", int(paid["branch_id"].nunique()))
 
     st.divider()
+    # ================== KPIs (CREAR FIGURAS, NO MOSTRAR AÚN) ==================
 
     # --- KPI 1: pedidos por hora ---
-    st.write("### Pedidos por hora (picos de demanda)")
     h = paid.groupby("order_hour")["order_id"].nunique().reindex(range(24), fill_value=0)
-    fig1 = plt.figure()
-    plt.bar(h.index, h.values)
-    plt.xticks(range(0,24,1))
-    plt.xlabel("Hora")
-    plt.ylabel("# Pedidos")
-    plt.title("Pedidos por hora")
-    st.pyplot(fig1)
+    fig1, ax1 = plt.subplots(figsize=(4.5, 3.2))
+    ax1.bar(h.index, h.values)
+    ax1.set_xticks(range(0, 24, 2))
+    ax1.set_xlabel("Hora")
+    ax1.set_ylabel("# Pedidos")
+    ax1.set_title("Pedidos por hora")
 
     # --- KPI 2: ingresos por hora ---
-    st.write("### Ingresos por hora")
     hr = paid.groupby("order_hour")["total_amount"].sum().reindex(range(24), fill_value=0)
-    fig2 = plt.figure()
-    plt.plot(hr.index, hr.values, marker="o")
-    plt.xticks(range(0,24,1))
-    plt.xlabel("Hora")
-    plt.ylabel("$ Ingresos")
-    plt.title("Ingresos por hora")
-    st.pyplot(fig2)
+    fig2, ax2 = plt.subplots(figsize=(4.5, 3.2))
+    ax2.plot(hr.index, hr.values, marker="o")
+    ax2.set_xticks(range(0, 24, 2))
+    ax2.set_xlabel("Hora")
+    ax2.set_ylabel("$ Ingresos")
+    ax2.set_title("Ingresos por hora")
 
-    st.divider()
-
-    # --- KPI 3: top productos por cantidad e ingresos ---
-    st.write("### Menú: Top productos (cantidad e ingresos)")
+    # --- KPI 3 y 4: top productos ---
     items["line_total"] = pd.to_numeric(items["line_total"], errors="coerce").fillna(0)
-    items["quantity"] = pd.to_numeric(items["quantity"], errors="coerce").fillna(0)
+    items["quantity"]   = pd.to_numeric(items["quantity"], errors="coerce").fillna(0)
 
-    # Relacionar items con productos
     mix = items.merge(prod[["product_id","food_item","category"]], on="product_id", how="left")
 
-    top_qty = (mix.groupby("food_item")["quantity"].sum().sort_values(ascending=False).head(10))
-    fig3 = plt.figure()
-    plt.barh(top_qty.index[::-1], top_qty.values[::-1])
-    plt.xlabel("Cantidad")
-    plt.title("Top 10 productos por cantidad")
-    st.pyplot(fig3)
+    top_qty = mix.groupby("food_item")["quantity"].sum().sort_values(ascending=False).head(10)
+    fig3, ax3 = plt.subplots(figsize=(4.5, 3.2))
+    ax3.barh(top_qty.index[::-1], top_qty.values[::-1])
+    ax3.set_xlabel("Cantidad")
+    ax3.set_title("Top 10 por cantidad")
 
-    top_rev = (mix.groupby("food_item")["line_total"].sum().sort_values(ascending=False).head(10))
-    fig4 = plt.figure()
-    plt.barh(top_rev.index[::-1], top_rev.values[::-1])
-    plt.xlabel("Ingresos ($)")
-    plt.title("Top 10 productos por ingresos")
-    st.pyplot(fig4)
+    top_rev = mix.groupby("food_item")["line_total"].sum().sort_values(ascending=False).head(10)
+    fig4, ax4 = plt.subplots(figsize=(4.5, 3.2))
+    ax4.barh(top_rev.index[::-1], top_rev.values[::-1])
+    ax4.set_xlabel("Ingresos ($)")
+    ax4.set_title("Top 10 por ingresos")
 
-    # --- KPI 4: por categoría ---
-    st.write("### Ventas por categoría")
+    # --- KPI 5: por categoría ---
     cat_rev = mix.groupby("category")["line_total"].sum().sort_values(ascending=False)
-    fig5 = plt.figure()
-    plt.bar(cat_rev.index, cat_rev.values)
-    plt.xticks(rotation=45, ha="right")
-    plt.ylabel("Ingresos ($)")
-    plt.title("Ingresos por categoría")
-    st.pyplot(fig5)
+    fig5, ax5 = plt.subplots(figsize=(4.5, 3.2))
+    ax5.bar(cat_rev.index, cat_rev.values)
+    ax5.tick_params(axis="x", rotation=30)
+    ax5.set_ylabel("Ingresos ($)")
+    ax5.set_title("Ingresos por categoría")
 
-    st.divider()
+    # --- KPI 6: método de pago ---
+    if "payment_method" not in paid.columns:
+        paid["payment_method"] = "Desconocido"
+    paid["payment_method"] = paid["payment_method"].fillna("Desconocido").astype(str)
 
-    # --- KPI 5: método de pago ---
-    st.write("### Método de pago")
     pm = paid["payment_method"].value_counts()
-    fig6 = plt.figure()
-    plt.bar(pm.index, pm.values)
-    plt.ylabel("# Órdenes")
-    plt.title("Órdenes por método de pago")
-    st.pyplot(fig6)
+    fig6, ax6 = plt.subplots(figsize=(4.5, 3.2))
+    ax6.bar(pm.index, pm.values)
+    ax6.tick_params(axis="x", rotation=20)
+    ax6.set_ylabel("# Órdenes")
+    ax6.set_title("Órdenes por método de pago")
+
+    # ================== DASHBOARD 3x2 (MOSTRAR AQUÍ) ==================
+    st.subheader(" Dashboard de KPIs")
+
+    r1c1, r1c2, r1c3 = st.columns(3)
+    with r1c1:
+        st.caption("Pedidos por hora")
+        st.pyplot(fig1, use_container_width=True)
+    with r1c2:
+        st.caption("Ingresos por hora")
+        st.pyplot(fig2, use_container_width=True)
+    with r1c3:
+        st.caption("Método de pago")
+        st.pyplot(fig6, use_container_width=True)
+
+    r2c1, r2c2, r2c3 = st.columns(3)
+    with r2c1:
+        st.caption("Top productos (cantidad)")
+        st.pyplot(fig3, use_container_width=True)
+    with r2c2:
+        st.caption("Top productos (ingresos)")
+        st.pyplot(fig4, use_container_width=True)
+    with r2c3:
+        st.caption("Ingresos por categoría")
+        st.pyplot(fig5, use_container_width=True)
+
+    # (opcional) liberar memoria matplotlib
+    plt.close(fig1); plt.close(fig2); plt.close(fig3)
+    plt.close(fig4); plt.close(fig5); plt.close(fig6)
+
 
 
 with tab_rfm:
@@ -623,7 +554,7 @@ with tab_rfm:
     rfm["segmento"] = rfm.apply(segment, axis=1)
 
     # Orden bonito
-    cols = ["customer_id", "customer_name", "recency_days", "frequency", "monetary", "R", "F", "M", "RFM", "rfm_score_total", "segmento"]
+    cols = ["customer_id", "customer_name", "recency_days", "frequency", "monetary", "segmento", "R", "F", "M", "RFM", "rfm_score_total"]
     rfm = rfm[cols].sort_values(["segmento", "rfm_score_total"], ascending=[True, False]).reset_index(drop=True)
 
     # Guardar CSV en tables_csv
@@ -648,34 +579,51 @@ with tab_rfm:
 
     st.divider()
 
-    # ====== Gráficas ======
-    st.write("### 📊 Distribución por segmento")
-    seg = rfm["segmento"].value_counts()
-    fig1 = plt.figure()
-    plt.bar(seg.index, seg.values)
-    plt.xticks(rotation=30, ha="right")
-    plt.ylabel("# Clientes")
-    plt.title("Clientes por segmento")
-    st.pyplot(fig1)
+    # ====== Gráficas (DASHBOARD en 3 columnas) ======
+    st.write("###  Dashboard RFM")
 
-    st.write("### ⏱️ Recency (días desde última compra)")
-    fig2 = plt.figure()
-    plt.hist(rfm["recency_days"], bins=10)
-    plt.xlabel("Días")
-    plt.ylabel("# Clientes")
-    plt.title("Distribución de Recency")
-    st.pyplot(fig2)
+    colA, colB, colC = st.columns(3)
 
-    st.write("### 🔁 Frequency vs 💰 Monetary (por cliente)")
-    fig3 = plt.figure()
-    plt.scatter(rfm["frequency"], rfm["monetary"])
-    plt.xlabel("Frequency (# órdenes)")
-    plt.ylabel("Monetary ($)")
-    plt.title("Frequency vs Monetary")
-    st.pyplot(fig3)
+    # 1) Clientes por segmento
+    with colA:
+        st.caption("Clientes por segmento")
+        seg_counts = rfm["segmento"].value_counts()
+        fig1, ax1 = plt.subplots()
+        ax1.bar(seg_counts.index, seg_counts.values)
+        ax1.set_ylabel("# Clientes")
+        ax1.tick_params(axis="x", rotation=30)
+        ax1.set_title("Segmentos")
+        st.pyplot(fig1, use_container_width=True)
+        plt.close(fig1)
+
+    # 2) Histograma de Recency
+    with colB:
+        st.caption("Recency (días desde última compra)")
+        fig2, ax2 = plt.subplots()
+        ax2.hist(rfm["recency_days"], bins=10)
+        ax2.set_xlabel("Días")
+        ax2.set_ylabel("# Clientes")
+        ax2.set_title("Recency")
+        st.pyplot(fig2, use_container_width=True)
+        plt.close(fig2)
+
+    # 3) Scatter Frequency vs Monetary
+    with colC:
+        st.caption("Frequency vs Monetary")
+        fig3, ax3 = plt.subplots()
+        ax3.scatter(rfm["frequency"], rfm["monetary"])
+        ax3.set_xlabel("Frequency (# órdenes)")
+        ax3.set_ylabel("Monetary ($)")
+        ax3.set_title("F vs M")
+        st.pyplot(fig3, use_container_width=True)
+        plt.close(fig3)
+
+
+
+
 
     st.divider()
-    st.write("### 🏆 Top 10 clientes por Monetary")
+    st.write("###  Top 10 clientes por Monetary")
     top10 = rfm.sort_values("monetary", ascending=False).head(10)
     st.dataframe(top10[["customer_id", "customer_name", "recency_days", "frequency", "monetary", "segmento"]], use_container_width=True)
 
@@ -775,7 +723,7 @@ with tab_ops:
         cols += ["product_id","food_item","category","stock_on_hand","stock_min","reorder_qty","sale_price"]
 
         st.dataframe(inv_view[cols])
-        st.write("### 🛠️ Ajustar inventario (manual)")
+        st.write("###  Ajustar inventario (manual)")
 
     with st.expander("Abrir editor de inventario"):
         # opciones
@@ -871,7 +819,7 @@ with tab_ops:
             qty = st.number_input("Cantidad a pedir", min_value=1, max_value=100000, value=max(1, sug_qty))
             entrega = st.date_input("Fecha de entrega (expected_date)")
 
-            if st.button("📦 Crear OC"):
+            if st.button(" Crear OC"):
                 ok, msg = scm_create_po_manual(branch_id, product_id, int(qty), entrega.isoformat())
                 if ok:
                     st.success("✅ " + msg)
@@ -1048,6 +996,93 @@ with tab_ops:
                     st.rerun()
 
 
+# ====== TAB TPS ======
+with tab_tps:
+    st.subheader("👤 Crear nuevo cliente")
+
+    new_name = st.text_input("Nombre del nuevo cliente (ej: Juan Perez)")
+    if st.button("➕ Guardar cliente"):
+        new_name = new_name.strip()
+        if len(new_name) < 3:
+            st.warning("Escribe un nombre válido (mínimo 3 caracteres).")
+        else:
+            customers2 = read_table("customers")
+            if (customers2["customer_name"].astype(str).str.lower() == new_name.lower()).any():
+                st.warning("Ese cliente ya existe.")
+            else:
+                new_id = next_id("customers", "customer_id", 1)
+                append_table("customers", pd.DataFrame([{
+                    "customer_id": new_id,
+                    "customer_name": new_name,
+                    "created_at": datetime.utcnow().isoformat()
+                }]))
+                st.success(f"✅ Cliente creado con ID {new_id}.")
+                st.rerun()
+
+    # TPS UI
+    
+    customers = read_table("customers")
+    products  = read_table("products")
+    if "is_active" in products.columns:
+        products["is_active"] = pd.to_numeric(products["is_active"], errors="coerce").fillna(1).astype(int)
+        products = products[products["is_active"] == 1]
+    branches  = read_table("branches")
+
+    cust_opt = {f'{r.customer_id} - {r.customer_name}': int(r.customer_id) for _, r in customers.iterrows()}
+    prod_opt = {f'{r.product_id} - {r.food_item} ({r.category}) ${r.sale_price}': int(r.product_id) for _, r in products.iterrows()}
+    branch_opt = {f'{r.branch_id} - {r.branch_name}': int(r.branch_id) for _, r in branches.iterrows()}
+
+    if "order_id" not in st.session_state:
+        st.session_state.order_id = None
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        cust_key = st.selectbox("Cliente", list(cust_opt.keys()))
+    with col2:
+        br_key = st.selectbox("Sucursal", list(branch_opt.keys()))
+    with col3:
+        pay = st.selectbox("Pago", ["Cash","Card","Transfer"])
+
+    if st.button("➕ Nuevo pedido"):
+        st.session_state.order_id = tps_create_order(cust_opt[cust_key], branch_opt[br_key], pay)
+        st.success(f"Pedido creado: #{st.session_state.order_id}")
+
+    st.subheader("🛒 Carrito")
+    if st.session_state.order_id is None:
+        st.info("Crea un pedido para empezar.")
+    else:
+        pkey = st.selectbox("Producto", list(prod_opt.keys()))
+        qty = st.number_input("Cantidad", min_value=1, max_value=50, value=1)
+
+        if st.button("Agregar item"):
+            try:
+                tps_add_item(st.session_state.order_id, prod_opt[pkey], int(qty))
+                st.success("✅ Item agregado.")
+                st.rerun()
+            except ValueError as e:
+                st.error(str(e))
+
+
+
+        items = read_table("order_items")
+        prod = read_table("products")
+        cart = items[items["order_id"] == st.session_state.order_id].merge(
+            prod[["product_id","food_item","category"]], on="product_id", how="left"
+        )
+        st.dataframe(cart[["food_item","category","quantity","unit_price","line_total"]])
+
+        if st.button("💳 Checkout (pagar)"):
+            alertas = tps_checkout(st.session_state.order_id)
+            st.success("✅ Checkout completado. ERP actualizado y stock descontado.")
+
+            if alertas:
+                st.session_state["alertas_reabastecer"] = alertas
+                st.warning("⚠️ Stock bajo mínimo. Debes abastecerte (crear Orden de Compra).")
+            else:
+                st.session_state["alertas_reabastecer"] = []
+
+            
+    
             
 
 
