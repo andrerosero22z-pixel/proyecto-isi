@@ -1,4 +1,4 @@
-# 🍝 Verona Restaurant
+#  Verona Restaurant
 ### Sistema TPS + ERP + SCM + KPIs + RFM  
 **Python · Streamlit · CSV**
 
